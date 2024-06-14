@@ -1,10 +1,21 @@
 
-<h1 class="title">Entries</h1>
+<% content_for :title do %>
+  <p class="title">FoodLog Application</p> <%= DateTime.now %>
+<% end %>
 
-<div id="entries">
+<div id="entries" class="columns mt-6 is-centered">
   <% @entries.each do |entry| %>
-   
-    <%= render entry %>
+  <div class="column is-one-quarter">
+  <header class="subtitle has-text-weight=bold">
+    <%= entry.meal_type %>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <%= render entry %>
+      <p class="italic"> Logged <%= time_ago_in_words(entry.created_at)%> ago </p>
+    </div>
+    </div>
+  </div>
     <p>
       <%= link_to "Show this entry", entry %>
       
