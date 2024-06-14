@@ -1,6 +1,6 @@
 
 <% content_for :title do %>
-  <p class="title">FoodLog Application</p> <%= DateTime.now %>
+  <p class="title">FoodLog Application</p> <%= Time.now.strftime("%A %d, %Y") %>
 <% end %>
 
 <div id="entries" class="columns mt-6 is-centered">
@@ -16,10 +16,12 @@
     </div>
     </div>
   </div>
+  <div class="card-footer">
     <p>
-      <%= link_to "Show this entry", entry %>
-      
+      <%= link_to "Show this entry", entry %>      
     </p>
+    
+    </div>
   <% end %>
 </div>
 
