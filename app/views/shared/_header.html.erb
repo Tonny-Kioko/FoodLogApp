@@ -1,0 +1,14 @@
+
+
+<section class="hero is-primary">
+  <div class="hero-body">
+    <% if content_for?(:title) %>
+  <%= yield(:title) %>
+<% else %>
+  <p class="title">FoodLog Application</p>
+<% end %>
+    
+    </br>
+    <p class="subtitle">Navbar for the FoodLog Application</p>
+  </div>
+</section>
