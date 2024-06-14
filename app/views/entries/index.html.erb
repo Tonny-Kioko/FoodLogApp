@@ -25,4 +25,10 @@
   <% end %>
 </div>
 
-<%= link_to "New entry", new_entry_path %>
+<div class="actions">
+  <%= link_to "New entry", new_entry_path, class: "button is-success" %>
+</div>
+</br>
+<div class="actions">
+  <%= link_to "All Entries", archives_index_path, class: "button is-link is-outlined is-centered"  %>
+</div>
